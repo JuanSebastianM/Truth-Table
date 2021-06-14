@@ -1,7 +1,7 @@
 const hour = Math.floor(Math.random()*24);
 const minute = Math.floor(Math.random()*60);
-const result = document.getElementById("result");
-result.innerHTML = "The current time is: " + hour + ":" + minute;
+const time = document.getElementById("time");
+time.innerHTML = "The current time is: " + hour + ":" + minute;
 
 const transferCost = document.getElementById("cost")
 
