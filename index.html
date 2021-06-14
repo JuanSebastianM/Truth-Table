@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Truth Table</title>
+</head>
+<body>
+    <h1>Make a transfer from one account to another. You may choose any bank.</h1>
+    <p>
+        <form>
+            <fieldset>
+                <legend><h3>Client's account information</h3></legend>
+                <label for="cbank">Choose your bank:</label>
+                <select name="clientBank" id="cbank" />
+                    <option disabled selected>Select your bank's name</option>
+                    <option value="Developer Bank">Developer Bank</option>
+                    <option value="Another Bank">Another Bank</option>
+                </select>
+                <p>
+                    <label for="caccount">Account's holder name:</label>
+                    <input type="text" id="caccount" placeholder="e.g. Lucas The Dog" required/>
+                </p>
+                <p>
+                    <label for="balance">Current balance:</label>
+                    <input type="number" id="balance" value="1000000" readonly/>
+                </p>
+            </fieldset>
+        </form>
+    </p>
+    <p>
+        <form>
+            <fieldset>
+                <legend><h3>Target's account information</h3></legend>
+                <label for="tbank">Choose the target bank:</label>
+                <select name="targetBank" id="tbank">
+                    <option disabled selected>Select the target bank's name</option>
+                    <option value="Developer Bank">Developer Bank</option>
+                    <option value="Another Bank">Another Bank</option>
+                </select>
+                <p>
+                    <label for="taccount">Target account's holder name:</label>
+                    <input type="text" id="taccount" placeholder="e.g. Dani The Cat " required/>
+                </p>
+                <input type="button" value="Save all" id="save"/>
+            </fieldset>
+        </form>
+    </p>
+    <p>
+        <form>
+            <fieldset>
+                    <legend><h3>Make a transfer</h3></legend>
+                    <label for="cost">Transfer cost:</label>
+                    <input type="text" id="cost" readonly/>               
+                <p>
+                    <label for="transfer">Amount of money to transfer:</label>
+                    <input type="number" required/>
+                    <input type="submit" value="Transfer"/>
+                </p>
+                <p id="result"></p>
+            </fieldset>
+        </form>
+    </p>
+    <script src="index.js"></script>
+</body>
+</html>
