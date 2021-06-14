@@ -1,7 +1,16 @@
 const hour = Math.floor(Math.random()*24);
 const minute = Math.floor(Math.random()*60);
 const time = document.getElementById("time");
-time.innerHTML = "The current time is: " + hour + ":" + minute;
+function showTime() {
+    if (minute < 10) {
+        time.innerHTML += "The current time is: " + hour + ":0" + minute;
+    }
+    else {
+        time.innerHTML = "The current time is: " + hour + ":" + minute;
+    }
+}
+showTime();
+const result = document.getElementById("result");
 
 const transferCost = document.getElementById("cost")
 
@@ -25,6 +34,9 @@ function save() {
         else {
             transferCost.value = 100;
         }
+    }
+    else {
+        result.innerHTML = "<strong>WARNING:</strong> Remember you can only make transfers from 9:00 to 12:00 and 15:00 to 20:00. Come back later!";
     }
 }
 const verifiedClient = "Daniela Páez"; //determines whether the client account is verified or not.
