@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Truth Table</title>
+    <title>Transfer Machine</title>
 </head>
-<body>
-    <h1>Make a transfer from one account to another. You may choose any bank.</h1>
+<body align = center>
+    <h1>Welcome to the Transfer Machine!</h1>
+    <p>This platform allows you to make bank transfers.</p>
     <p>
         <form>
             <fieldset>
@@ -22,7 +23,7 @@
                 </p>
                 <p>
                     <label for="balance">Current balance:</label>
-                    <input type="number" id="balance" value="1000000" readonly/>
+                    <input type="number" id="balance" readonly/>
                 </p>
             </fieldset>
         </form>
@@ -51,10 +52,10 @@
                     <legend><h3>Make a transfer</h3></legend>
                     <label for="cost">Transfer cost:</label>
                     <input type="text" id="cost" readonly/>               
-                <p>
+                <p id="verify">
                     <label for="transfer">Amount of money to transfer:</label>
-                    <input type="number" required/>
-                    <input type="submit" value="Transfer"/>
+                    <input type="number" id="transferAmount" required/>
+                    <input type="button" id="transferButton" value="Transfer"/>
                 </p>
                 <p id="time"></p>
                 <p id="result"></p>
